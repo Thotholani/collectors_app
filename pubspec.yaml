@@ -1,0 +1,79 @@
+name: collectors_app
+description: The companion wasteaway app for collectors
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+# Icons
+  cupertino_icons: ^1.0.2
+  carbon_icons: ^0.0.1+2
+  eva_icons_flutter: ^3.1.0 #general icon pack
+  flutter_feather_icons: ^2.0.0+1 #suppliment
+  assorted_layout_widgets:
+# API get and post integration
+  http:
+# Toast messages
+  fluttertoast: ^8.0.9
+# Login details saving and usage
+  shared_preferences: ^2.0.15
+# Location finding and translation
+  google_maps_flutter:
+  geolocator:
+  geocoding:
+  uuid:
+# Request popup appearance
+  animated_text_kit: ^4.2.2
+  avatar_glow:
+  shimmer: ^2.0.0
+# Realtime location tracking and display
+  flutter_polyline_points: ^1.0.0
+  location: ^4.4.0
+  flutter_svg: ^1.1.5
+  slide_to_confirm: ^1.1.0
+  slide_to_act: ^2.0.1
+  url_launcher: ^6.1.5
+# JSON Object Conversion
+  json_serializable: ^6.4.1
+# Replies and messages
+  grouped_list:
+  intl:
+#  Sliding up panel
+  sliding_up_panel:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_native_splash: ^2.2.8
+
+flutter_native_splash:
+  color: "#67BF75"
+  image: assets/images/splash_logo.png
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist-Regular.ttf
+        - asset: assets/fonts/Urbanist-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Urbanist-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/Urbanist-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Urbanist-Thin.ttf
+          weight: 400
+        - asset: assets/fonts/Urbanist-Light.ttf

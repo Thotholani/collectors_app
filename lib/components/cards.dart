@@ -2,10 +2,13 @@ import 'package:carbon_icons/carbon_icons.dart';
 import 'package:collectors_app/screens/dashboardScreen.dart';
 import 'package:collectors_app/screens/ticketInvestigationScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../services/collectionService.dart';
 import '../theme.dart';
 import 'buttons.dart';
+
+final DateFormat formatter = DateFormat('d MMM yyyy');
 
 class PickupCard extends StatefulWidget {
   PickupCard({required this.collectionNumber,required this.address,required this.date,required this.fee,required this.status});
@@ -118,8 +121,8 @@ class _PickupCardState extends State<PickupCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Collection Number: " + collectionNumber,style: Theme.of(context).textTheme.bodyText1,),
-                  Text("Date: "+ date,style: Theme.of(context).textTheme.bodyText1,),
-                  Text("Fee: K"+ fee,style: Theme.of(context).textTheme.bodyText1,),
+                  Text("Date: "+ formatter.format(DateTime.parse(date)),style: Theme.of(context).textTheme.bodyText1,),
+                  Text("Fee: K"+ fee+"0",style: Theme.of(context).textTheme.bodyText1,),
                   Text("Status: "+ status,style: Theme.of(context).textTheme.bodyText1,)
                 ],
               )

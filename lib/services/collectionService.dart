@@ -28,7 +28,7 @@ void  acceptRequest(String collection_id,String collector_id, BuildContext conte
   var response = await http.post(Uri.parse(url), body: {'collector_id': collector_id, 'collection_id': collection_id});
   if (response.statusCode == 200) {
     // print(response);
-    // print(response.body);
+    print(response.body);
     var jsondata = jsonDecode(response.body.toString());
     if(jsondata["success"]) {
       String collectionId = jsondata["collection_id"];

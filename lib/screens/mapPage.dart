@@ -250,7 +250,8 @@ class PanelWidget extends StatelessWidget {
                             icon: Icon(CarbonIcons.phone)),
                       ),
                     ]),
-                distance <= 0.05
+                distance <= 10
+                // distance <=0.05;
                     ? SlideAction(
                         sliderRotate: false,
                         borderRadius: 12,

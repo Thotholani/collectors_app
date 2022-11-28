@@ -160,7 +160,9 @@ class _TicketInvestigationScreenState extends State<TicketInvestigationScreen> {
             final collections = snapshot.data;
             return buildReplies(collections!);
           } else {
-            return NoInformation(errorDetail: 'You have no previous pickup requests', errorHeading: 'No Collections Available');
+            return Center(
+              child: Text("You are communicating with City Council"),
+            );
           }
         } else {
           return Center(
